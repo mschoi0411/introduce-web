@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What I Do</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="init.css">
+</head>
+<body>
+  <!-- What I Do -->
+  <section id="features" class="do">
+    <div class="container">
+      <div class="title">
+        <h4>Features</h4>
+        <h2>What I Do</h2>
+      </div>
+      <div class="do-me">                       
+        <div class="do-inner" onclick="showTooltip(this, '','data-analysis')">
+          <div class="icon">
+            <i class="fa-solid fa-server"></i>        
+          </div>
+          <div class="content">
+            <h3>AI & 데이터 분석</h3>
+            <p>트리구조, 대상 형식화, 알고리즘 이해 및 최적화</p>
+          </div>
+        </div>
+        <div class="do-inner" onclick="showTooltip(this, '','security')">
+          <div class="icon">
+            <i class="fa-solid fa-key"></i>
+          </div>
+          <div class="content">
+            <h3>보안(해킹)</h3>
+            <p>web해킹, 암호학(RSA,동형암호 등), 리버싱, 네트워크 해킹</p>
+          </div>
+        </div>
+        <div class="do-inner" onclick="showTooltip(this, '', 'math-physics')">
+          <div class="icon">
+            <i class="fa-solid fa-rocket"></i>
+          </div>
+          <div class="content">
+            <h3>순수수학, 순수물리(천체물리)</h3>
+            <p>정수론, 수치해석학, 확률론, 선형대수학, 위상수학, 암호론</p> <br>
+            <p>천체 물리학, 우주론, 천문 계산법, 전파천문학, 우주비행학</p>
+          </div>  
+      </div>
+    </div>  
+  </section>
+  <!-- //end What I Do -->
+</body>
+</html>
