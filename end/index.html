@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Final Project</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- header -->
+  <header>
+    <div class="container">
+      <h1>
+        <button data-animation-scroll="true" data-target="#main">MS Choi</button>
+      </h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="todo.html">
+              방명록
+            </a>
+          </li>
+          <li>
+            <button data-animation-scroll="true" data-target="#about">
+              소개
+            </button>
+          </li>
+          <li>
+            <button data-animation-scroll="true" data-target="#features">
+              공부 분야
+            </button>
+          </li>
+          <li>
+            <button data-animation-scroll="true" data-target="#portfolio">
+              경력
+            </button>
+          </li>
+          <li>
+            <button data-animation-scroll="true" data-target="#contact">
+              연락처
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- //end header -->
+  <!-- main -->
+  <main id="main">
+    <div class="container">
+      <h4>AI 디지털 선구자</h4>
+      <h2 class="active">저는 <span></span></h2>
+      <p>데이터 속 숨겨진 진실을 밝혀내고,</p><br>
+      <p>보안의 새로운 지평을 여는 여정이 시작되는,</p><br> 
+      <p>미래를 지키는 인공지능 전문가를 </p><br>
+      <p>꿈꾸는 대학생의 이야기.</p>
+      <button class="download" data-animation-scroll="true" data-target="#about">꿈 열어보기</button>
+      <button class="mouse"><i class="fa-solid fa-computer-mouse"></i></button>
+    </div>
+  </main>
+  <!-- //end Main -->
+  <!-- About Me -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="title">
+        <h4>Who Am I</h4>
+        <h2>소개</h2>
+      </div>
+      <div class="about-self">
+        <div class="left">
+          <img src="images/animation.png" alt="">
+        </div>
+        <div class="right">
+          <div class="section personal-info">
+            <h2>개인 정보</h2>
+            <p><strong>이름:</strong> 최민석</p>
+            <p><strong>나이:</strong> 22세</p>
+            <p><strong>mbit:</strong> INTJ/ENTJ</p>
+            <p><strong>꿈:</strong> AI 데이터 분석가, 정보보안전문가</p>
+        </div>
+        <div class="section contact-info">
+            <h2>성격</h2>
+            <p><strong>장점</strong> 분석력, 계획 능력, 리더십 성향, 성취 지향적</p>
+            <p><strong>단점</strong> 직설적, 완벽주의</p>
+            <p><strong>가치관</strong> 정직, 책임감</p>
+        </div>
+        <div class="section bio">
+            <h2>취미</h2>
+            <p>클론 코딩, 게임 개발, 독서, 게임</p>
+            <h2>사용 가능 언어 및 툴</h2>
+            <p>c/c++, java, python, html/css/js, vs code, burpsuite, metasploit...</p>
+        </div>
+          <div class="social">
+            <a href="https://discord.com" target="_blank">
+              <i class="fa-brands fa-discord"></i>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://github.com" target="_blank">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end About Me -->
+  <!-- What I Do -->
+  <section id="features" class="do">
+    <div class="container">
+      <div class="title">
+        <h4>Features</h4>
+        <h2>What I Do</h2>
+      </div>
+      <div class="do-me">                       
+        <div class="do-inner" onclick="showTooltip(this, '','data-analysis')">
+          <div class="icon">
+            <i class="fa-solid fa-server"></i>        
+          </div>
+          <div class="content">
+            <h3>AI & 데이터 분석</h3>
+            <p>트리구조, 대상 형식화, 알고리즘 이해 및 최적화</p>
+          </div>
+        </div>
+        <div class="do-inner" onclick="showTooltip(this, '','security')">
+          <div class="icon">
+            <i class="fa-solid fa-key"></i>
+          </div>
+          <div class="content">
+            <h3>보안(해킹)</h3>
+            <p>web해킹, 암호학(RSA,동형암호 등), 리버싱, 네트워크 해킹</p>
+          </div>
+        </div>
+        <div class="do-inner" onclick="showTooltip(this, '', 'math-physics')">
+          <div class="icon">
+            <i class="fa-solid fa-rocket"></i>
+          </div>
+          <div class="content">
+            <h3>순수수학, 순수물리(천체물리)</h3>
+            <p>정수론, 수치해석학, 확률론, 선형대수학, 위상수학, 암호론</p> <br>
+            <p>천체 물리학, 우주론, 천문 계산법, 전파천문학, 우주비행학</p>
+          </div>  
+      </div>
+    </div>  
+  </section>
+  <!-- //end What I Do -->
+  <!-- Background -->
+  <div class="bg"></div>
+  <!-- //end Background-->
+  <!-- PortFolio -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <div class="title">
+        <h4>PORTFOLIOBACK</h4>
+        <h2>PortFolio</h2>
+      </div>
+      <div class="portfolio-me">
+        <div class="portfolio-inner">
+          <a href="https://github.com/mschoi0411/Data-Analysis/tree/main/%EC%9C%A0%EB%8F%99%EC%9D%B8%EA%B5%AC" target="_blank">
+            <img src="images/bigdata01.png" alt="">
+            <strong>빅데이터 분석</strong>
+            <h3>역별 유동인구 비율에 관한 시각화 및 연구</h3>
+          </a>
+        </div>
+        <div class="portfolio-inner">
+          <a href="https://github.com/mschoi0411/Data-Analysis/tree/main/%EB%85%B8%ED%9B%84%EC%83%9D%ED%99%9C%EC%A7%80%EC%97%AD%20%EB%B6%84%EC%84%9D" target="_blank">
+            <img src="images/data project.png" alt="">
+            <strong>빅데이터 분석</strong>
+            <h3>은퇴한 사람들을 위한</h3> <br>
+            <h3>지역별 또는 성향별 노후생활 지역 분석 연구</h3>
+            <h4>(현재 진행 중)</h4>
+          </a>
+        </div>
+        <div class="portfolio-inner">
+          <a href="https://github.com/mschoi0411/traffic-protectors" target="_blank">
+          <img src="images/traffic protector.png" alt="">
+          <strong>설계</strong>
+          <h3> 로드킬 방지를 위한 제품, traffic protector</h3>
+          <h4>2023-00-00</h4>
+          <h4>교내 대회 최우수상 수상(1등)</h4>
+          </a>
+        </div>
+        <div class="portfolio-inner">
+          <a href="https://github.com/mschoi0411/java_project" target="_blank">
+          <img src="images/java restaurant.png" alt="">
+          <strong>java</strong>
+          <h3>음식점 게임 구현</h3>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- //end PortFolio -->
+   <!-- Contact With Me -->
+   <section id="contact" class="contact">
+    <div class="container">
+      <div class="title">
+        <h4>CONTACT</h4>
+        <h2>연락처 & 방명록</h2>
+      </div>
+      <div class="contact-me">
+        <div class="left">
+          <div class="card">
+            <div class="icon">
+              <i class="fa-solid fa-phone-volume"></i>
+            </div>
+            <div class="info-text">
+              <h3>전화번호</h3>
+              <p>010-9636-5380</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="icon">
+              <i class="fa-solid fa-envelope-open-text"></i>
+            </div>
+            <div class="info-text">
+              <h3>email</h3>
+              <p>ssh10006@naver.com</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="icon">
+              <i class="fa-solid fa-location-crosshairs"></i>
+            </div>
+            <div class="info-text">
+              <h3>address</h3>
+              <p>대한민국, 서울특별시, 노원구</p>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <form action="send_email.php" method="post">
+            <div class="form-group">
+              <label for="name">이름</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">이메일</label>
+              <input type="text" id="email" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="msg">메세지</label>
+              <textarea id="msg" name="message" required></textarea>
+            </div>
+            <button type="submit">전송</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end Contact With Me -->
+  <footer>
+    <div class="inner">
+      <div class="upper">
+        <h1>최민석</h1>
+        <ul>
+          <li><a href="#">소개</a></li>
+          <li><a href="#">분야</a></li>
+          <li><a href="#">경력</a></li>
+          <li><a href="#">연락처</a></li>
+        </ul>
+      </div>
+
+      <div class="lower">
+        <address>
+          e-mail : ssh10006@naver.com <br>
+          tp : 010-9636-5380
+        </address>
+        <p>
+          git - https://github.com/mschoi0411?tab=repositories <br>
+          instagram id - choiminseok43 <br>
+          discord name - enejwl#9958
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- script 태그는 수정하지 않습니다. -->
+  <script src="script.js"></script>
+</body>
+</html>
