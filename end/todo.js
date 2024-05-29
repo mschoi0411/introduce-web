@@ -38,7 +38,6 @@ window.addEventListener('DOMContentLoaded', function () {
     getTodos();
 });
 
-const nameInput = document.querySelector('.name-input');
 const todoInput = document.querySelector('.todo-input');
 
 todoInput.addEventListener('keypress', function(event){
@@ -47,21 +46,15 @@ todoInput.addEventListener('keypress', function(event){
     }
 });
 
-nameInput.addEventListener('keypress', function(event) {
-    if (event.key === 'Enter') {
-        addTodo();
-    }
-});
 
 function addTodo() {
     const title = todoInput.value.trim();
     let todoData = {
         id : 0,
-        name: name,
         item : title,
         timestamp: new Date().toISOString()
     };
-    if (name === '' || title === '') return;
+    if (title === '') return;
 
     axios.post(`${host}/todo`, todoData)
         .then(response => {
