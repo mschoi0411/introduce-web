@@ -17,7 +17,7 @@ function renderTodos(todos) {
   todos.forEach(todo => {
     const todoDiv = document.createElement('div');
     todoDiv.classList.add('todo-item');
-    todoDiv.textContent = `${todo.item} (작성 시간 : ${new Date(todo.timestamp).toLocaleDateString()})`;
+    todoDiv.textContent = `${todo.author}: ${todo.item} (작성 시간 : ${new Date(todo.timestamp).toLocaleDateString()})`;
     todosContainer.appendChild(todoDiv);
 
     //삭제 버튼 생성 및 이벤트 처리
@@ -38,6 +38,7 @@ window.addEventListener('DOMContentLoaded', function () {
     getTodos();
 });
 
+const authorInput = document.querySelector('.author-input');
 const todoInput = document.querySelector('.todo-input');
 
 todoInput.addEventListener('keypress', function(event){
@@ -48,16 +49,19 @@ todoInput.addEventListener('keypress', function(event){
 
 
 function addTodo() {
+    const author = authorInput.value.trim();
     const title = todoInput.value.trim();
     let todoData = {
         id : 0,
+        author: author,
         item : title,
         timestamp: new Date().toISOString()
     };
-    if (title === '') return;
+    if (author === '' || title === '') return;
 
     axios.post(`${host}/todo`, todoData)
         .then(response => {
+            authorInput.value = '';
             todoInput.value = '';
             getTodos();
         })
